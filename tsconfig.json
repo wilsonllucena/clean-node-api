@@ -1,8 +1,8 @@
 {
     "buildOptions": {
+        "target": "es2019",
         "outDir": "./dist",
         "module": "commonjs",
-        "target": "es2019",
         "esModuleInterop": true,
         "strictNullChecks": true,
         "allowJs": true
