@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "jest  --silent --noStackTrace --runInBand", 
+    "test": "jest  --silent --noStackTrace --runInBand --watch", 
     "test:verbose": "jest --runInBand",
-    "test:unit": "yarn test --watch -c jest-unit-config.js",
-    "test:integration": "npm test --watch -c jest-integration-config.js",
-    "test:staged": "yarn test --findRelatedTests",
-    "test:ci": "yarn test --coverage"
+    "test:unit": "npm run test -c jest-unit-config.js",
+    "test:integration": "npm run test --watch -c jest-integration-config.js",
+    "test:staged": "npm run test --findRelatedTests",
+    "test:ci": "npm run test --coverage"
   },
   "author": "Wilson Lucena",
   "license": "ISC",
