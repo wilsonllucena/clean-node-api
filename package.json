@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "jest  --silent --noStackTrace --runInBand --watch", 
+    "test": "jest --watch --silent --noStackTrace --runInBand",
     "test:verbose": "jest --runInBand",
     "test:unit": "npm run test -c jest-unit-config.js",
-    "test:integration": "npm run test --watch -c jest-integration-config.js",
+    "test:integration": "npm run test -c jest-integration-config.js",
     "test:staged": "npm run test --findRelatedTests",
     "test:ci": "npm run test --coverage"
   },
@@ -15,6 +15,7 @@
   "devDependencies": {
     "@types/jest": "^27.0.3",
     "@types/node": "^16.11.12",
+    "@types/validator": "^13.7.0",
     "@typescript-eslint/eslint-plugin": "^4.0.1",
     "eslint": "^7.12.1",
     "eslint-config-standard-with-typescript": "^21.0.1",
@@ -28,5 +29,8 @@
     "ts-jest": "^27.1.1",
     "ts-node": "^10.4.0",
     "typescript": "*"
+  },
+  "dependencies": {
+    "validator": "^13.7.0"
   }
 }
