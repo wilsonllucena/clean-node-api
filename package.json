@@ -13,6 +13,7 @@
   "author": "Wilson Lucena",
   "license": "ISC",
   "devDependencies": {
+    "@types/bcrypt": "^5.0.0",
     "@types/jest": "^27.0.3",
     "@types/node": "^16.11.12",
     "@types/validator": "^13.7.0",
@@ -31,6 +32,7 @@
     "typescript": "*"
   },
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "validator": "^13.7.0"
   }
 }

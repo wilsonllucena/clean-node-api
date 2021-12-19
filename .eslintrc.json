@@ -4,6 +4,6 @@
         "project": "./tsconfig.json"
     },
     "rules": {
-        "@typescript-eslint/strict-boolean-expressions": "Off"
+        "@typescript-eslint/strict-boolean-expressions": "On"
     }
 }
