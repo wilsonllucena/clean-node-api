@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "jest --watch --silent --noStackTrace --runInBand",
+    "test": "jest  --silent --noStackTrace --runInBand",
     "test:verbose": "jest --runInBand",
-    "test:unit": "npm run test -c jest-unit-config.js",
+    "test:unit": "npm run test -c jest-unit-config.js --watch",
     "test:integration": "npm run test -c jest-integration-config.js",
     "test:staged": "npm run test --findRelatedTests",
     "test:ci": "npm run test --coverage"
@@ -13,8 +13,10 @@
   "author": "Wilson Lucena",
   "license": "ISC",
   "devDependencies": {
+    "@shelf/jest-mongodb": "^2.1.1",
     "@types/bcrypt": "^5.0.0",
     "@types/jest": "^27.0.3",
+    "@types/mongodb": "^4.0.7",
     "@types/node": "^16.11.12",
     "@types/validator": "^13.7.0",
     "@typescript-eslint/eslint-plugin": "^4.0.1",
@@ -33,6 +35,7 @@
   },
   "dependencies": {
     "bcrypt": "^5.0.1",
+    "mongodb": "^4.2.2",
     "validator": "^13.7.0"
   }
 }
