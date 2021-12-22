@@ -3,11 +3,20 @@ import { AccountMongoRepository } from "./account-mongo-repository";
 
 describe('Account Mongo Repositoy', () => {
     
+    //Connecta no banco quando iniciar os testes
     beforeAll(async () => {
        await MongoHelper.connect(process.env.MONGO_URL)
     })
+
+    //Desconnecta do banco no final dos testes
     afterAll(async () => {
         await MongoHelper.disconnect();
+    })
+
+    //Limpar tabelas no teste
+    beforeEach(async () => {
+        const accountCollection = MongoHelper.getCollection('accounts');
+        await accountCollection.deleteMany({});
     })
 
     const makeSut = (): AccountMongoRepository => {
