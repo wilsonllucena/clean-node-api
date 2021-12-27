@@ -4,12 +4,12 @@
   "main": "index.js",
   "scripts": {
     "start": "sucrase-node src/main/server.ts",
-    "test": "jest  --silent --noStackTrace --runInBand",
+    "test": "jest  --passWithNoTests --silent --noStackTrace --runInBand",
     "test:verbose": "jest --runInBand",
-    "test:unit": "npm run test -c jest-unit-config.js --watch ",
-    "test:integration": "npm run test -c jest-integration-config.js",
-    "test:staged": "npm run test --findRelatedTests",
-    "test:ci": "npm run test --coverage"
+    "test:unit": "npm test --watch -c jest-unit-config.js ",
+    "test:integration": "npm test --watch -c jest-integration-config.js",
+    "test:staged": "npm test --findRelatedTests",
+    "test:ci": "npm test --coverage"
   },
   "author": "Wilson Lucena",
   "license": "ISC",
@@ -41,6 +41,7 @@
   "dependencies": {
     "bcrypt": "^5.0.1",
     "express": "^4.17.2",
+    "fast-glob": "^3.2.7",
     "mongodb": "^4.2.2",
     "validator": "^13.7.0"
   }
